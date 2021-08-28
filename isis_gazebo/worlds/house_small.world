@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+	<world name="default">
+		<!-- Uncomment this for tracking the robot -->
+		<!-- Comment this for manually changing the camera-->
+		<!--
+		<gui>
+			<camera name="gzclient_camera">
+				<track_visual>
+					<name>isis</name>
+					<min_dist>2</min_dist>
+					<max_dist>25</max_dist>
+				</track_visual>
+			</camera>
+		</gui>
+		-->
+		<include>
+			<uri>model://sun</uri>
+            <pose>0 0 100 0 0 0</pose>
+		</include>
+        
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+
+		<include>
+			<uri>model://house_2_2</uri>
+			<pose>0 0 0 0 0 0</pose>
+		</include>
+        
+        
+
+	</world>
+</sdf>
+ 

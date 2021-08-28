@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+	<world name="default">
+		<!-- Uncomment this for tracking the robot -->
+		<!-- Comment this for manually changing the camera-->
+		<!--
+		<gui>
+			<camera name="gzclient_camera">
+				<track_visual>
+					<name>isis</name>
+					<min_dist>2</min_dist>
+					<max_dist>25</max_dist>
+				</track_visual>
+			</camera>
+		</gui>
+		-->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+        <include>
+            <uri>model://house_3_3</uri>
+            <pose>0 0 0 0 0 0</pose>
+        </include>
+    
+        <include>
+			<uri>model://house_3_help</uri>
+			<pose>-7 -6.25 0 0 0 0</pose>
+		</include>
+        
+        <include>
+			<uri>model://house_3_help</uri>
+			<pose>21.5 5.47 0 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://house_3_help</uri>
+			<pose>17.5 5.47 0 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://house_3_help</uri>
+			<pose>21.5 1.065 0 0 0 -1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>13.84 10.24 0.5 0 0 1.5708</pose>
+		</include>
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>-5.5 2.4 0.5 0 0 0</pose>
+		</include>
+
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>2 2.4 0.5 0 0 0</pose>
+		</include>
+
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>9.5 3.1 0.5 0 0 0.52</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>0 21.46 0.5 0 0 0</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>-9.2 15 0.5 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>4.75 10 0.5 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>4.75 20 0.5 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>4.75 15 0.5 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://house_3_help_2</uri>
+			<pose>-5.5 22 0 0 0 -1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://house_3_help_2</uri>
+			<pose>-5.5 6.5 0 0 0 -1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>14 19.7 0.5 0 0 1.5708</pose>
+		</include>
+        
+        <include>
+			<uri>model://willow_door_3</uri>
+			<pose>19.5 14 0.5 0 0 1.5708</pose>
+		</include>
+	</world>
+</sdf>
+ 

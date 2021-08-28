@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="dn" default="1"/>
+  <arg name="name" default="robot_$(arg dn)"/>
+  <arg name="pos_x" default="0.0"/>
+  <arg name="pos_y" default="0.0"/>
+  <arg name="psi" default="0.0"/>
+  <arg name="namespace_arg" default=""/>
+
+  <!-- send the robot XML to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find isis_gazebo)/robot/isis.urdf.xacro' idx:=$(arg dn)" />
+  
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-param robot_description
+              -urdf
+              -x $(arg pos_x)
+              -y $(arg pos_y)
+              -Y $(arg psi)
+              -model $(arg name)">
+  </node>
+</launch>

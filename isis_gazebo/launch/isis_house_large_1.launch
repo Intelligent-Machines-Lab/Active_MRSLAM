@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<launch>
+<!--
+  <group ns="robot_1">
+    <include file="$(find isis_gazebo)/launch/spawn_robot.launch">
+      <arg name="pos_x" value="-23.0" />
+      <arg name="pos_y" value="-22.0" />
+      <arg name="dn" value="1" />
+    </include>
+  </group>
+
+  <group ns="robot_2">
+    <include file="$(find isis_gazebo)/launch/spawn_robot.launch">
+      <arg name="pos_x" value="22.0" />
+      <arg name="pos_y" value="-22.0" />
+      <arg name="psi" value="3.1416" />
+      <arg name="dn" value="2" />
+    </include>
+  </group>
+
+  <group ns="robot_3">
+    <include file="$(find isis_gazebo)/launch/spawn_robot.launch">
+      <arg name="pos_x" value="22.0" />
+      <arg name="pos_y" value="17.0" />
+      <arg name="psi" value="3.1416" />
+      <arg name="dn" value="3" />
+    </include>
+  </group>
+
+  <group ns="robot_4">
+    <include file="$(find isis_gazebo)/launch/spawn_robot.launch">
+      <arg name="pos_x" value="-5.0" />
+      <arg name="pos_y" value="20.0" />
+      <arg name="dn" value="4" />
+    </include>
+  </group>
+
+  <group ns="robot_5">
+    <include file="$(find isis_gazebo)/launch/spawn_robot.launch">
+      <arg name="pos_x" value="-21.0" />
+      <arg name="pos_y" value="22.0" />
+      <arg name="dn" value="5" />
+    </include>
+  </group>
+    -->
+  <group ns="robot_1">
+    <include file="$(find isis_gazebo)/launch/spawn_robot.launch">
+      <arg name="pos_x" value="-5.0" />
+      <arg name="pos_y" value="20.0" />
+      <arg name="dn" value="1" />
+    </include>
+  </group>
+
+    
+  <!-- Publish joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- convert joint states to TF transforms for rviz, etc  -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find isis_gazebo)/worlds/house_large.world" /> 
+    <arg name="debug" value="false" />
+    <arg name="gui" value="true" />
+    <arg name="paused" value="false" />
+    <arg name="use_sim_time" value="true" />
+  </include>
+
+  
+
+</launch> 

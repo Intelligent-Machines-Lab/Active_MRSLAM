@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<robot name="isis" xmlns:xacro="http://www.ros.org/wiki/xacro">
+	
+	<xacro:property name="number" value="$(arg idx)"/> 
+	
+	<!-- Import urdf -->
+	<xacro:include filename="$(find isis_gazebo)/urdf/robot2.urdf.xacro" /> 
+	<!-- <xacro:include filename="$(find isis_gazebo)/urdf/isis_base.urdf.xacro" /> experimental do not uncomment-->
+	<xacro:include filename="$(find isis_gazebo)/urdf/controller.gazebo.xacro" />
+	<xacro:include filename="$(find isis_gazebo)/urdf/lidar.gazebo.xacro" />
+    <!-- <xacro:include filename="$(find isis_gazebo)/urdf/kinect.gazebo.xacro" /> -->
+
+	<xacro:macro name="robot">
+		<xacro:isis_base/>
+        <xacro:controller/>
+        <xacro:lidar/>
+        <!-- <xacro:kinect/> -->
+   	</xacro:macro>
+
+   <xacro:robot/>
+
+</robot>
